@@ -152,7 +152,7 @@ functionName(enterProperty);
 
 // is NaN
 
-function isNAN(testValue) {
+function isNaN(testValue) {
   return Number.isNaN(Number(testValue));
 }
 
