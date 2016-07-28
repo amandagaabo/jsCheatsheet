@@ -148,3 +148,19 @@ function functionName(property) {
 
 // call a function
 functionName(enterProperty);
+
+
+// is NaN
+
+function isNAN(testValue) {
+  return Number.isNaN(Number(testValue));
+}
+
+
+// random number generator
+
+Math.random() // generates number between 0 and 1, multiply to get whole numbers
+
+// round down
+
+Math.floor(number to round down);
