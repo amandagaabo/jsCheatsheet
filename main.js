@@ -75,13 +75,13 @@ arrayName[i] = 'new value'  // where i is the index of the item being replaced
 if (condition) {
   console.log('do this if true');
 } else {
-  console.log('do this if false')
+  console.log('do this if false');
 }
 
 
 // for loop
 
-for (i = 0; i < 10; i++) {
+for (var i = 0; i < 10; i++) {
   console.log(i);
 }
   // i = 0 -- starting value of i
@@ -150,6 +150,14 @@ function functionName(property) {
 functionName(enterProperty);
 
 
+// sorting from smallest to largest
+
+arrayName.sort(function(a, b) {
+  return a - b
+});
+  // change to b - a for largest to smallest
+
+
 // is NaN
 
 function isNaN(testValue) {
@@ -162,5 +170,42 @@ function isNaN(testValue) {
 Math.random() // generates number between 0 and 1, multiply to get whole numbers
 
 // round down
+Math.floor(number to round down);  // rounds down to nearest whole number
 
-Math.floor(number to round down);
+// round to two decimal places
+Math.round(NumberWithMoreDecimals * 100) / 100;
+
+
+// jQuery
+
+$(document).ready(){
+  $(selector).actionName();
+});
+
+
+// jQuery do something when clicked
+
+$(".button-class").click(function(){
+  $(".button-class").hide();
+});
+
+// jQuery selectors
+
+$(".class-name") //element of a class
+$("p") // all p elements
+$("ul li:eq(0)")  // the first element in a list (zero index)
+$("li").last()  //the last item in a list
+$("ul li:last") //alternate way to select last item in a list
+$("p:first") // first p element, can be last too
+$("div p")  // all p elements that are descended of a div element
+$("tr:even") // all even tr elements, index starts at 0, can also choose odd
+
+
+
+
+// jQuery actions
+
+.click()
+.hide()
+.css("property", "newValue");  // change css properties like color, font-family, font-size
+$("ul li:eq(0)").append("<li>New item!</li>");  //add an li with content after index 0 (below item 1)
