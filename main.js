@@ -176,17 +176,29 @@ Math.floor(number to round down);  // rounds down to nearest whole number
 Math.round(NumberWithMoreDecimals * 100) / 100;
 
 
-// jQuery
+// jQuery all code should be between this:
 
 $(document).ready(){
   $(selector).actionName();
+
+
 });
 
 
 // jQuery do something when clicked
 
 $(".button-class").click(function(){
-  $(".button-class").hide();
+  $(".button-class").actionName();
+});
+
+
+// jQuery do something when hovering over element
+
+$('selector').hover(function(){
+  $('selector').actionName();  //what to do when hovering
+  },
+  function(){
+  $('selector').actionName();  // what to go back to when not hovering
 });
 
 // jQuery selectors
@@ -195,17 +207,26 @@ $(".class-name") //element of a class
 $("p") // all p elements
 $("ul li:eq(0)")  // the first element in a list (zero index)
 $("li").last()  //the last item in a list
+$("ul li:not(:last)"  // all execpt for the last
+$("ul > li")  // only selects the direct child li element
 $("ul li:last") //alternate way to select last item in a list
 $("p:first") // first p element, can be last too
 $("div p")  // all p elements that are descended of a div element
 $("tr:even") // all even tr elements, index starts at 0, can also choose odd
 
 
+// jQuery event handlers
+
+.click() // when clicked
+.hover() // when mouse hovers over
 
 
-// jQuery actions
+// jQuery methods
 
-.click()
-.hide()
-.css("property", "newValue");  // change css properties like color, font-family, font-size
+.hide(); // hide element
+.toggleClass('hidden');  //toggles between hidden and shown using bootstrap
+.css("property", "newValue");  // change css properties like color, font-family, font-size -- try not to use if possible
+.addClass('class-name');  // better than using .css
+.removeClass(); // removes class
 $("ul li:eq(0)").append("<li>New item!</li>");  //add an li with content after index 0 (below item 1)
+.text()  // returns text of the selected element
